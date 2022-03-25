@@ -1,0 +1,116 @@
+/*======= Variables =======*/
+:root {
+  --clr-main: #bb41d2;
+  --clr-darkest: #240c28;
+  --clr-dark: #6f277d;
+  ---clr-light: #cf7ae0;
+  --clr-white: #f1d9f6;
+  --clr-comp-1: #33e20f;
+  --clr-comp-2: #12e9c5;
+  --clr-comp-3: #e91a13;
+  --clr-comp-4: #f5cd07;
+
+  --linear-gradient: linear-gradient(
+    var(--clr-dark),
+    var(--clr-comp-2),
+    var(--clr-comp-1)
+  );
+
+  --linear-gradient-vert: repeating-linear-gradient(
+    90deg,
+    var(--clr-comp-1),
+    var(--clr-comp-4),
+    var(--clr-comp-3),
+    var(--clr-comp-2)
+  );
+}
+/*======= End of Variables =======*/
+
+/*======= Global Styles =======*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lobster", cursive;
+  color: var(--clr-white);
+  height: 100vh;
+
+  background: url(https://images.pexels.com/photos/6331086/pexels-photo-6331086.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+    no-repeat;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*======= End of Global Styles =======*/
+
+.heading {
+  text-transform: capitalize;
+  text-align: center;
+  margin-block: 10px;
+  background-image: var(--linear-gradient-vert);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*======= Wrapper =======*/
+
+.wrapper {
+  border-radius: 20px;
+  padding: 7%;
+  background-color: var(--clr-main);
+  margin-inline: 10px;
+  box-shadow: 0px 0px 2px 2px var(--clr-white);
+}
+
+/* Timer Container */
+
+.timer_container {
+  flex-wrap: wrap;
+}
+
+.timer-card {
+  text-align: center;
+
+  padding: 5px;
+  margin: 5px;
+  min-width: 150px;
+  border-radius: 7px;
+
+  background-color: var(--clr-main);
+  box-shadow: 2px 2px 2px 2px var(--clr-white);
+}
+
+.timer-card:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-main);
+  cursor: pointer;
+}
+
+/* End of Timer Container */
+
+/*======= End of Wrapper =======*/
